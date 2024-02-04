@@ -2,6 +2,4 @@
 
 ## 作者1: Yan Xinle
 
-q
-
 ## 作者2: Yan Xuewei
