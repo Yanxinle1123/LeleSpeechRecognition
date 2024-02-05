@@ -13,3 +13,6 @@ def anim_print(value, delay=0.25, loop=1, final=' '):
         print(f"\r{final}\b", end='', flush=True)  # 输出最终字符并退格
     else:
         print(f"\r{final}\n", end='', flush=True)  # 输出最终字符并换行
+
+
+anim_print(value=["/", "-", "\\", "|"], loop=5)

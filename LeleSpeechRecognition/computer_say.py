@@ -8,3 +8,7 @@ class Say:
 
     def say(self):
         os.system(f"say -r {self.rate} {self.text}")
+
+
+say = Say("你好, 我是你的电脑", 180)
+say.say()
