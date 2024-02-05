@@ -1,7 +1,7 @@
 import langid
 import speech_recognition as value_sr
 
-from LeleSpeechRecognition.anim_print import anim_print
+from LeleSpeechRecognition.__init__ import anim_print
 from LeleSpeechRecognition.computer_say import Say
 
 
@@ -22,11 +22,11 @@ class SR:
     def sound_recording(self):
         try:
             with value_sr.Microphone() as self.source:
-                self.recognizer.adjust_for_ambient_noise(self.source, duration=2.5)
                 if self.print:
                     print("正在调整噪音阈值, 预计需要2秒")
                 if self.computer_say:
                     Say("正在调整噪音阈值, 预计需要2秒").say()
+                self.recognizer.adjust_for_ambient_noise(self.source, duration=2.5)
                 if self.anim:
                     anim_print(["噪音阈值调整中 ... 2", "噪音阈值调整中 ... 1", "噪音阈值调整中 ... 0"], 1)
                 if self.print:
@@ -92,3 +92,8 @@ class SR:
                 print("错误")
             if self.computer_say:
                 Say("错误").say()
+
+
+sr = SR(None, 5, "zh-CN", True, True, False)
+sr.sound_recording()
+sr.identify()

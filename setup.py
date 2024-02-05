@@ -2,13 +2,12 @@ from setuptools import setup, find_packages
 
 setup(
     name="LeleSR",
-    version="0.1",
+    version="1.0",
     packages=find_packages(),
     install_requires=[
-        "time",
-        "os",
-        "speech_recognition",
-        "langid"
+        "SpeechRecognition",
+        "langid",
+        "pyaudio",
     ],
     author="YanXinle",
     author_email="1020121123@qq.com",
